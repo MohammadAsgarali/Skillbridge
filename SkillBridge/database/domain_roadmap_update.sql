@@ -1,0 +1,13 @@
+USE skillbridge;
+
+-- Run this once if you prefer a manual migration instead of the automatic
+-- compatibility migration in config/database.php.
+ALTER TABLE students ADD COLUMN IF NOT EXISTS course VARCHAR(120) DEFAULT NULL;
+ALTER TABLE students ADD COLUMN IF NOT EXISTS career_domain VARCHAR(100) DEFAULT NULL;
+ALTER TABLE students ADD COLUMN IF NOT EXISTS phone VARCHAR(30) DEFAULT NULL;
+ALTER TABLE students ADD COLUMN IF NOT EXISTS graduation_year SMALLINT DEFAULT NULL;
+ALTER TABLE students ADD COLUMN IF NOT EXISTS college_location VARCHAR(120) DEFAULT NULL;
+ALTER TABLE students ADD COLUMN IF NOT EXISTS linkedin_url VARCHAR(255) DEFAULT NULL;
+ALTER TABLE students ADD COLUMN IF NOT EXISTS github_url VARCHAR(255) DEFAULT NULL;
+ALTER TABLE students ADD COLUMN IF NOT EXISTS instagram_url VARCHAR(255) DEFAULT NULL;
+ALTER TABLE students ADD COLUMN IF NOT EXISTS portfolio_url VARCHAR(255) DEFAULT NULL;
